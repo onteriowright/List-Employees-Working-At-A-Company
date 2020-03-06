@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Classes
 {
@@ -6,5 +7,6 @@ namespace Classes
   {
     public DateTime DateFounded { get; set; }
     public string CompanyName { get; set; }
+    public List<Employee> ListOfEmployees = new List<Employee>();
   }
 }
