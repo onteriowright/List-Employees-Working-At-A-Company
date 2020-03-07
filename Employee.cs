@@ -8,31 +8,19 @@ namespace Classes
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Title { get; set; }
-    public string StartDate { get; set; }
-    public List<Employee> ListOfEmployees = new List<Employee>();
-
+    public DateTime StartDate { get; set; }
     public void FullName()
     {
-      Console.WriteLine($"{FirstName} {LastName}");
+      Console.WriteLine($"Full name of employee: {FirstName} {LastName}");
+      Console.WriteLine($"=============================================");
     }
 
-    public Employee(string firstName, string lastName, string title, string startDate)
+    public Employee(string firstName, string lastName, string title, DateTime startDate)
     {
       FirstName = firstName;
       LastName = lastName;
       Title = title;
       StartDate = startDate;
-    }
-
-    public void ListEmployees()
-    {
-      foreach (Employee info in ListOfEmployees)
-      {
-        Console.WriteLine(info.FirstName);
-        Console.WriteLine(info.LastName);
-        Console.WriteLine(info.Title);
-        Console.WriteLine(info.StartDate);
-      }
     }
   }
 }
